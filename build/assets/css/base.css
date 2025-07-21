@@ -1,10 +1,187 @@
 body {
   color: #DEDEDE;
   background: #2C2C2C;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: all ease-in-out 300ms;
+  padding: 0;
+  margin: 0;
 }
 
-header {
+* {
+  z-index: 1;
+}
+
+footer, header {
   background: #404040;
+  padding: 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer nav, header nav {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer nav a, header nav a {
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+footer nav a:hover, header nav a:hover {
+  color: #dedede;
+  text-decoration: none;
+}
+footer .logo, header .logo {
+  height: 3rem;
+  width: auto;
+}
+
+@media only screen and (min-width: 1000px) {
+  header {
+    flex-direction: row;
+  }
+  header nav, footer nav {
+    flex-direction: row;
+  }
+}
+#header-nav {
+  display: none;
+}
+
+#header-nav-toggle {
+  display: block;
+  font-size: 2rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  #header-nav-toggle {
+    display: none;
+  }
+  #header-nav {
+    display: flex !important;
+  }
+}
+footer {
+  margin-top: 2rem;
+}
+footer .logo {
+  height: 3rem;
+}
+footer p {
+  width: 100%;
+  text-align: center;
+}
+
+main > section {
+  width: auto;
+  margin: 0 0.75rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  main > section {
+    margin: 0 3rem;
+  }
+}
+section {
+  width: 100%;
+}
+
+p {
+  width: 100%;
+}
+
+a {
+  color: #4EB8FF;
+  text-decoration: underline;
+}
+
+img, svg {
+  height: 1.5rem;
+  width: auto;
+}
+
+.fg-primary {
+  color: #FFBB00;
+}
+
+.fg-secondary {
+  color: #CE80FD;
+}
+
+.fg-tertiary {
+  color: #14FEB7;
+}
+
+.fg-quaternary {
+  color: #FF16CC;
+}
+
+.button, .btn {
+  display: block;
+  width: fit-content;
+  padding: 1rem;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.button-primary {
+  background: #FFBB00;
+}
+
+.button-secondary {
+  background: #CE80FD;
+}
+
+.button-tertiary {
+  background: #14FEB7;
+}
+
+.button-quaternary {
+  background: #FF16CC;
+}
+
+h1, h2 {
+  margin-top: 3rem;
+}
+
+h3 {
+  margin-top: 2.5rem;
+}
+
+h4, h5 {
+  margin-top: 0.5rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+h5, h6 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 /*# sourceMappingURL=base.css.map */

@@ -1,0 +1,179 @@
+// -------------------------------------------
+// UCC NetSoc Website redesign 2025 Stylesheet
+// Created 21/07/2025 by El Egan Morley
+// -------------------------------------------
+
+@use "base.scss" as b;
+
+// ----------------
+// Special Sections
+// ----------------
+#hero {
+    position: relative;
+    overflow: hidden;
+    
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("../media/hero.jpg");
+    background-position: center;
+    background-size: cover;
+
+    height: 60vh;
+    width: calc(100% - b.$s-9 - b.$s-9);
+
+    padding: b.$s-5 b.$s-9;
+
+    .logo-intro {
+        * {
+            display: inline-block
+        }
+
+        img {
+            height: b.$s-13;
+
+            margin-right: b.$s-5;
+
+            display: none;
+        }
+
+        h1 {
+            font-size: b.$s-8;
+            margin-top: 0;
+            max-width: 100%;
+        }
+    }
+
+    p {
+        font-size: 1.15rem;
+        width: 100%;
+        margin-bottom: b.$s-4;
+    }
+}
+@media only screen and (min-width: b.$bp-small-mobile) {
+    #hero { height: 55vh; }
+}
+@media only screen and (min-width: b.$bp-tablet) {
+    #hero {
+        height: 65vh;
+
+        .logo-intro img { display: inline-block; height: b.$s-16; }
+    }
+}
+@media only screen and (min-width: b.$bp-laptop) {
+    #hero {
+        height: 55vh;
+
+        .logo-intro img { display: inline-block; height: b.$s-16; }
+
+        h1 { font-size: b.$s-8; max-width: 29ch !important; }
+
+        p { width: 60ch; }
+
+        &::after {
+            content: "";
+            width: 169px;
+            height: 401px;
+            background-color: b.$bg-low;
+            display: block;
+            position: absolute;
+            right: -26px;
+            bottom: -138px;
+            rotate: 50deg;
+            z-index: 0;
+        }
+    }
+}
+
+#about-us-and-upcoming-events, #past-events {
+    // To counter the absolute shape being above text in next section.
+    z-index: 3;
+    position: relative;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: b.$s-4;
+
+    h4 {
+        color: b.$theme-primary;
+    }
+
+    article {
+        padding: b.$s-2;
+        background-color: b.$bg-mid;
+        margin-bottom: b.$s-4;
+        border-radius: b.$br-small;
+
+        h3 { margin-top: 0; margin-bottom: 0; }
+        h4 { margin-bottom: 0; }
+    }    
+}
+#upcoming-events a, #past-events a {
+    font-size: b.$s-5;
+    font-weight: b.$fw-semi-bold;
+
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+@media only screen and (min-width: b.$bp-tablet) {
+    #about-us-and-upcoming-events { flex-direction: row; }
+}
+
+
+#services {
+    background: b.$bg-mid;
+
+    margin: b.$s-8 0 0 0;
+    padding: b.$s-3 b.$s-3;
+
+    h2 { margin-top: 0; }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: 4;
+        gap: b.$s-4;
+        width: 100%;
+
+        a {
+            color: b.$fg-normal;
+            background: b.$bg-alt;
+            text-decoration: none;
+            display: block;
+
+            padding: b.$s-5;
+            transition: all ease-in-out 300ms;
+            border: 2px solid;
+
+            h3 {
+                margin-top: 0;
+            }
+
+            &:hover {
+                cursor: pointer;
+                transform: translateY(-0.25rem);
+                color: b.$fg-highlight;
+                border-color: b.$fg-highlight;
+                
+                h3 {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        :nth-child(1) { border-color: b.$theme-primary; }
+        :nth-child(2) { border-color: b.$theme-secondary; }
+        :nth-child(3) { border-color: b.$theme-tertiary; }
+        :nth-child(4) { border-color: b.$theme-quaternary; }
+
+    }
+}
+@media only screen and (min-width: b.$bp-laptop) {
+    #services {
+        padding: b.$s-4 b.$s-9;
+    
+        .cards {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+    }
+}

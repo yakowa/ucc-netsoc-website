@@ -1,4 +1,15 @@
+// -------------------------------------------
+// UCC NetSoc Website redesign 2025 Stylesheet
+// Created 21/07/2025 by El Egan Morley
+// -------------------------------------------
+
+
+// ------
+// Variables
+// ------
+
 // Colours
+// ------
 $bg-low: #2C2C2C;
 $bg-mid: #595959;
 $bg-high: #404040;
@@ -14,12 +25,236 @@ $theme-secondary: #CE80FD;
 $theme-tertiary: #14FEB7;
 $theme-quaternary: #FF16CC;
 
+// Font Weights
+// ------------
+$fw-thin: 200;
+$fw-normal: 400;
+$fw-semi-bold: 600;
+$fw-bold: 800;
 
+// Sizes
+// -----
+$s-1: 0.25rem;
+$s-2: 0.5rem;
+$s-3: 0.75rem;
+$s-4: 1rem;
+$s-5: 1.25rem;
+$s-6: 1.5rem;
+$s-7: 1.75rem;
+$s-8: 2rem;
+$s-9: 3rem;
+$s-10: 4rem;
+$s-11: 5rem;
+$s-12: 6rem;
+$s-13: 7rem;
+$s-14: 8rem;
+$s-15: 9rem;
+$s-16: 10rem;
+
+// Border Radii
+$br-small: 0.25rem;
+$br-mid: 0.5rem;
+$br-large: 3rem;
+$br-full: 999px;
+
+// Breakpoints
+// -----------
+$bp-small-mobile: 470px;
+$bp-mobile: 500px;
+$bp-tablet: 750px;
+$bp-laptop: 1000px;
+$bp-desktop: 1200px;
+$bp-large-display: 1500px;
+
+
+
+// ----
+// Base
+// ----
 body {
     color: $fg-normal;
     background: $bg-low;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    transition: all ease-in-out 300ms;
+
+    padding: 0;
+    margin: 0;
+}
+* {
+    z-index: 1;
 }
 
-header {
+
+
+// ------
+// Layout
+// ------
+
+// Header & Footer
+// ---------------
+footer, header {
     background: $bg-high;
+
+    padding: $s-4 $s-9;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    nav {
+        width: 70%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        a {
+            color: $fg-highlight;
+            font-size: 1.3rem;
+            font-weight: $fw-semi-bold;
+            text-transform: capitalize;
+
+            &:hover {
+                color: $fg-muted;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .logo {
+        height: $s-9;
+        width: auto;
+    }
+}
+@media only screen and (min-width: $bp-laptop) {
+    header { flex-direction: row; }
+    header nav, footer nav {
+        flex-direction: row;
+    }
+}
+
+// Header Nav Toggler
+// ------------------
+#header-nav {
+    display: none;
+}
+#header-nav-toggle {
+    display: block;
+    font-size: $s-8;
+}
+@media only screen and (min-width: $bp-laptop) {
+    #header-nav-toggle { display: none; }
+    #header-nav {
+        display: flex !important;
+    }
+}
+
+// Footer
+// ------
+footer {
+    margin-top: $s-8;
+
+    .logo {
+        height: $s-9;
+    }
+
+    p {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+// Main Content & Sections
+// -----------------------
+main > section {
+    width: auto;
+    margin: 0 $s-3;
+}
+@media only screen and (min-width: $bp-laptop) {
+    main > section { margin: 0 $s-9; }
+}
+
+section {
+    width: 100%;
+}
+
+
+
+// ----------
+// Typography
+// ----------
+p {
+    width: 100%;
+}
+a {
+    color: $fg-link;
+    text-decoration: underline;
+}
+
+img, svg {
+    height: $s-6;
+    width: auto;
+}
+
+// Theme Colours
+// -------------
+.fg-primary { color: $theme-primary; }
+.fg-secondary { color: $theme-secondary; }
+.fg-tertiary { color: $theme-tertiary; }
+.fg-quaternary { color: $theme-quaternary; }
+
+
+// Fake Buttons
+// ------------
+.button, .btn {
+    display: block;
+    width: fit-content;
+    padding: $s-4;
+
+    color: $fg-highlight;
+
+    font-weight: $fw-semi-bold;
+    font-size: $s-4;
+}
+
+.button-primary { background: $theme-primary; }
+.button-secondary { background: $theme-secondary; }
+.button-tertiary { background: $theme-tertiary; }
+.button-quaternary { background: $theme-quaternary; }
+
+// Headers
+h1, h2 {
+    margin-top: 3rem;
+}
+h3 {
+    margin-top: 2.5rem;
+}
+h4, h5 {
+    margin-top: 0.5rem;
+}
+
+h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+
+    text-transform: uppercase;
+}
+h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+h4 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+h5, h6 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
 }

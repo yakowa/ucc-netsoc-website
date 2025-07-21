@@ -28,6 +28,8 @@
     <link rel="manifest" href="/assets/media/site.webmanifest"/>
     <!-- Dependencies -->
     <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script src="assets/js/toggle_nav.js" defer></script>
     <!-- Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" defer></script>
     <!-- Twemoji -->
@@ -37,9 +39,12 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <header>
-        <img src="assets/media/logos/netsoc_horizontal.png" alt="UCC NetSoc" class="logo">
+        <div>
+            <img src="assets/media/logos/netsoc_horizontal.png" alt="UCC NetSoc" class="logo">
+        </div>
 
-        <nav>
+        <button id="header-nav-toggle">☰</button>
+        <nav id="header-nav" style="display: none;">
             <a href="">UPCOMING EVENTS</a>
             <a href="">SERVICES</a>
             <a href="">ABOUT US</a>
@@ -52,16 +57,18 @@
         </nav>
     </header>
 
-    <main>
-        <section id="hero">
+    <section id="hero">
+        <div class="logo-intro">
             <img src="assets/media/logos/netsoc_vertical.png" alt="">
             <h1>UCC's <span class="fg-primary">Technology</span>, <span class="fg-secondary">Networking</span>, and <span class="fg-tertiary">Gaming</span> Society</h1>
-            
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam accusantium doloremque, exercitationem facilis hic corrupti molestiae, similique beatae quia ratione natus reiciendis velit harum error!</p>
+        </div>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam accusantium doloremque, exercitationem facilis hic corrupti molestiae, similique beatae quia ratione natus reiciendis velit harum error!</p>
 
-            <a href="" class="button-primary">FIND OUT ABOUT <b>OUR SERVICES</b></a>
-        </section>
-
+        <a href="" class="btn button-secondary">FIND OUT ABOUT <b>OUR SERVICES</b></a>
+    </section>
+    
+    <main>
         <section id="about-us-and-upcoming-events">
             <section id="about-us">
                 <h2>About Us</h2>
