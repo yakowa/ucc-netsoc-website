@@ -1,6 +1,6 @@
 # UCC NetSoc Website
 
-This is the new website for [University College Cork](ucc.ie)'s [Networking Society](netsoc.co), redesigned in 2025 by [El Egan Morley](yakowa.com).
+This is the new website for [University College Cork](https://ucc.ie)'s [Networking Society](https://netsoc.co), redesigned in 2025 by [El Egan Morley](https://yakowa.com).
 
 ![License: CC BY-SA 4.0](https://img.shields.io/badge/Created-2025-ffee00)
 ![License: CC BY-SA 4.0](https://img.shields.io/badge/Last_Updated-2025-66ff00)
