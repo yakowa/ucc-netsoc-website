@@ -1,8 +1,25 @@
-$primary-colour: #d55ee5;
+// Colours
+$bg-low: #2C2C2C;
+$bg-mid: #595959;
+$bg-high: #404040;
+$bg-alt: #000000;
 
-$bg-test: red;
+$fg-muted: #dedede;
+$fg-normal: #DEDEDE;
+$fg-highlight: #FFFFFF;
+$fg-link: #4EB8FF;
+
+$theme-primary: #FFBB00;
+$theme-secondary: #CE80FD;
+$theme-tertiary: #14FEB7;
+$theme-quaternary: #FF16CC;
+
 
 body {
-    color: $primary-colour;
-    background: $bg-test;
+    color: $fg-normal;
+    background: $bg-low;
+}
+
+header {
+    background: $bg-high;
 }

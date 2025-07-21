@@ -1,6 +1,10 @@
 body {
-  color: #d55ee5;
-  background: red;
+  color: #DEDEDE;
+  background: #2C2C2C;
+}
+
+header {
+  background: #404040;
 }
 
 /*# sourceMappingURL=base.css.map */
