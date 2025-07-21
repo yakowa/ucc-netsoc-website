@@ -1,0 +1,18 @@
+{
+  "name": "netsoc-website-redesign-2025",
+  "version": "1.0.0",
+  "description": "The 2025 redesign for the official UCC NetSoc website.",
+  "main": "build/index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "update-styles": "node node_modules/sass/sass.js src/assets/scss/base.scss build/assets/css/base.css",
+    "watch-styles": "node node_modules/sass/sass.js --watch src/assets/scss/base.scss build/assets/css/base.css"
+  },
+  "author": "El Egan Morley",
+  "license": "CC-BY-NC-SA-4.0",
+  "dependencies": {
+    "sass": "^1.89.2"
+  }
+}
