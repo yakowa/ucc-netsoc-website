@@ -1,0 +1,10 @@
+{
+    "events": {
+        "12345": {
+            "event_name": "Lorem, ipsum dolor.",
+            "event_date": "2025-08-19 12:00:00",
+            "event_location": "UCC, WGB 107",
+            "event_image": "https://raw.githubusercontent.com/UCCNetsoc/wiki/master/events/thumbnails/Blogging_Guide.jpg"
+        }
+    }
+}
