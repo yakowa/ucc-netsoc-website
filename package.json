@@ -1,5 +1,5 @@
 {
-  "name": "netsoc-website-redesign-2025",
+  "name": "netsoc-website",
   "version": "1.0.0",
   "description": "The 2025 redesign for the official UCC NetSoc website.",
   "main": "build/index.html",
