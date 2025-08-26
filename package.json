@@ -1,18 +1,45 @@
 {
-  "name": "netsoc-website",
-  "version": "1.0.0",
-  "description": "The 2025 redesign for the official UCC NetSoc website.",
-  "main": "build/index.html",
-  "directories": {
-    "doc": "docs"
-  },
-  "scripts": {
-    "update-styles": "node node_modules/sass/sass.js src/assets/scss/base.scss build/assets/css/base.css",
-    "watch-styles": "node node_modules/sass/sass.js --watch src/assets/scss/base.scss build/assets/css/base.css"
-  },
-  "author": "El Egan Morley",
-  "license": "CC-BY-NC-SA-4.0",
-  "dependencies": {
-    "sass": "^1.89.2"
-  }
+	"name": "netsoc-website",
+	"private": true,
+	"version": "0.0.1",
+	"description": "The 2025 redesign for the official UCC NetSoc website.",
+	"author": "El Egan Morley",
+	"license": "CC-BY-NC-SA-4.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "eslint . && prettier --check .",
+		"format": "prettier --write .",
+		"test:e2e": "playwright test",
+		"test": "npm run test:e2e",
+		"update-styles": "sass src/lib/assets/scss/base.scss src/lib/assets/css/base.css",
+		"watch-styles": "sass --watch src/lib/assets/scss/base.scss src/lib/assets/css/base.css"
+	},
+	"devDependencies": {
+		"@eslint/compat": "^1.2.5",
+		"@eslint/js": "^9.18.0",
+		"@playwright/test": "^1.49.1",
+		"@sveltejs/adapter-auto": "^6.0.0",
+		"@sveltejs/kit": "^2.22.0",
+		"@sveltejs/vite-plugin-svelte": "^6.0.0",
+		"eslint": "^9.18.0",
+		"eslint-config-prettier": "^10.0.1",
+		"eslint-plugin-svelte": "^3.0.0",
+		"globals": "^16.0.0",
+		"prettier": "^3.4.2",
+		"prettier-plugin-svelte": "^3.3.3",
+		"svelte": "^5.0.0",
+		"svelte-check": "^4.0.0",
+		"typescript": "^5.0.0",
+		"typescript-eslint": "^8.20.0",
+		"vite": "^7.0.4"
+	},
+	"dependencies": {
+		"sass": "^1.91.0"
+	}
 }
