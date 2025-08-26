@@ -44,4 +44,4 @@ You can preview the production build with `npm run preview`.
 
 
 ## Calender / Events API
-See [the API](https://github.com/yakowa/ucc-netsoc-website).
+See [the API](https://github.com/UCCNetsoc/netsoc-api).
