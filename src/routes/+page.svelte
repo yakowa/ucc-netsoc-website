@@ -12,7 +12,7 @@
         <h1>UCC's <span class="fg-primary">Technology</span>, <span class="fg-secondary">Networking</span>, and <span class="fg-tertiary">Gaming</span> Society</h1>
     </div>
     
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam accusantium doloremque, exercitationem facilis hic corrupti molestiae, similique beatae quia ratione natus reiciendis velit harum error!</p>
+    <p>We are a student-run society dedicated to all things digital and tech! We regularly host fun events and offer a wide range of services to students and other societies!</p>
 
     <a href="#services" class="btn button-secondary">FIND OUT ABOUT <b>OUR SERVICES</b></a>
 </section>
