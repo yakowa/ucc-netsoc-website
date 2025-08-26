@@ -117,6 +117,10 @@ footer, header {
             font-weight: $fw-semi-bold;
             text-transform: capitalize;
 
+            text-align: center;
+            padding: $s-5;
+            width: 100%;
+
             &:hover {
                 color: $fg-muted;
                 text-decoration: none;
@@ -133,6 +137,10 @@ footer, header {
     header { flex-direction: row; }
     header nav, footer nav {
         flex-direction: row;
+    }
+    header nav a, footer nav a {
+        padding: 0px !important;
+        width: auto !important;
     }
 }
 

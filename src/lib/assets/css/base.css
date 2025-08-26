@@ -31,6 +31,9 @@ footer nav a, header nav a {
   font-size: 1.3rem;
   font-weight: 600;
   text-transform: capitalize;
+  text-align: center;
+  padding: 1.25rem;
+  width: 100%;
 }
 footer nav a:hover, header nav a:hover {
   color: #dedede;
@@ -47,6 +50,10 @@ footer .logo, header .logo {
   }
   header nav, footer nav {
     flex-direction: row;
+  }
+  header nav a, footer nav a {
+    padding: 0px !important;
+    width: auto !important;
   }
 }
 #header-nav {
