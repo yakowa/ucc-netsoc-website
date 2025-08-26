@@ -21,11 +21,9 @@
     <section id="about-us-and-upcoming-events">
         <section id="about-us">
             <h2>About Us</h2>
-            <p>Founded in 2004 at University College Cork (the academic home of George Boole, the father of Boolean algebra), NETSOC (the Networking, Gaming, and Technology Society) is a student-run society dedicated to all things digital. 
-
-We operate our own digital services network, providing members with unique, hands-on experience in computing, networking, and system administration. Alongside this, we run regular educational workshops, gaming nights, and social events that bring together people from across the different disciplines of UCC. 
-
-Whether you're passionate about technology, curious about the internet, or just looking for a welcoming community to game and learn with, NETSOC is open to you. </p>
+            <p>Founded in 2004 at University College Cork (the academic home of George Boole, the father of Boolean algebra), NETSOC (the Networking, Gaming, and Technology Society) is a student-run society dedicated to all things digital.</p>
+            <p>We operate our own digital services network, providing members with unique, hands-on experience in computing, networking, and system administration. Alongside this, we run regular educational workshops, gaming nights, and social events that bring together people from across the different disciplines of UCC.</p>
+            <p>Whether you're passionate about technology, curious about the internet, or just looking for a welcoming community to game and learn with, NETSOC is open to you. </p>
         </section>
 
         <section id="upcoming-events">
