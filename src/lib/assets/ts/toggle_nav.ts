@@ -1,11 +1,11 @@
 export default function navToggleStart() {
     console.log('Header Nav JS Started')
-    var nav_toggle = document.getElementById("header-nav-toggle");
+    const nav_toggle = document.getElementById("header-nav-toggle");
     if (!nav_toggle) { console.error('Error! No Navigation Toggle Button found.'); return; }
     
     nav_toggle.addEventListener('click', function() {
         console.log('Click')
-        var nav = document.getElementById("header-nav");
+        const nav = document.getElementById("header-nav");
         if (!nav) { console.error('Error! No Navigation found.'); return; }
     
         console.log('Current display:', nav.style.display)
