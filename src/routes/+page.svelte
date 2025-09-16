@@ -1,5 +1,15 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
 	import assets_logo_netsoc_v from '$lib/assets/media/logos/netsoc_vertical.png';
+
+    var upcoming_events: any = [];
+
+    onMount(async function () {
+        const response = await fetch("https://api.netsoc.co/");
+        upcoming_events = await response.json();
+        // upcoming_events = [{"date":"2025-09-17 16:00:00","event_id":1,"image_url":"N/A","location":"???","name":"Pizza, Games (video + board) & Chill","public":true}]
+    });
+    upcoming_events = upcoming_events;
 </script>
 
 <style>
@@ -29,19 +39,16 @@
         <section id="upcoming-events">
             <h2>Upcoming Events</h2>
 
-            <article>
-                <h3>Lorem, ipsum dolor.</h3>
-                <h4>25th May, 2025 (in 5 days)</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, magnam!</p>
-            </article>
+            {#each upcoming_events as event}
+                <article>
+                    <h3>{event.name}</h3>
+                    <h4>{new Date(event.date).toDateString()} (in {Math.floor(((new Date(event.date)) - (Date.now())) / (1000 * 3600 * 24))} days)</h4>
+                    <h4>{event.location}</h4>
+                    <p>{event.description}</p>
+                </article>
+            {/each}
 
-            <article>
-                <h3>Lorem, ipsum dolor.</h3>
-                <h4>25th May, 2025 (in 5 days)</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, magnam!</p>
-            </article>
-
-            <a href="">See More Upcoming Events</a>
+            <a href="https://socsportal.ucc.ie/calendar.php/" target="_blank">See More Upcoming Events</a> <!-- ! todo - make this see our calendar -->
         </section>
     </section>
 
