@@ -5,7 +5,7 @@
     var upcoming_events: any = [];
 
     onMount(async function () {
-        const response = await fetch("https://api.netsoc.co/");
+        const response = await fetch("https://api.netsoc.co/upcoming_events");
         upcoming_events = await response.json();
         // upcoming_events = [{"date":"2025-09-17 16:00:00","event_id":1,"image_url":"N/A","location":"???","name":"Pizza, Games (video + board) & Chill","public":true}]
     });
@@ -84,17 +84,20 @@
         <h2>Past Events</h2>
 
         <article>
-            <h3>Lorem, ipsum dolor.</h3>
-            <h4>25th May, 2025 (in 5 days)</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, magnam!</p>
+            <h3>Hackathon</h3>
+            <p>Show off your skills at NetSoc hackathons!</p>
         </article>
 
         <article>
-            <h3>Lorem, ipsum dolor.</h3>
-            <h4>25th May, 2025 (in 5 days)</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, magnam!</p>
+            <h3>Game Jam</h3>
+            <p>A fun beginner friendly Game Jam!</p>
         </article>
 
-        <a href="">See More Upcoming Events</a>
+        <article>
+            <h3>Blogging Guide</h3>
+            <p>A guide to setting up and running your blog! Free hosting to all UCC Students!</p>
+        </article>
+
+        <a href="https://socsportal.ucc.ie/calendar.php/" target="_blank">See More Past Events</a>
     </section>
 </main>
