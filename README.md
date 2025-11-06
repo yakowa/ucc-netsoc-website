@@ -1,5 +1,7 @@
 # UCC NetSoc Website
 
+> **IMPORTANT NOTE:** Moved to [UCCNetsoc/ucc-netsoc-website](https://github.com/UCCNetsoc/ucc-netsoc-website) on 2025-11-06, will be maintained there from now on :)
+
 This is the new website for [University College Cork](https://ucc.ie)'s [Networking, Technology, and Gaming Society](https://netsoc.co), redesigned in 2025 by [El Egan Morley](https://yakowa.com).
 
 ![License: CC BY-SA 4.0](https://img.shields.io/badge/Created-2025-ffee00)
